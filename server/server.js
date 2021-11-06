@@ -23,6 +23,8 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.get('*', (req, res) => {
+    console.log("GET INDEX")
+    console.log(__dirname + '../client/build/index.html')
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
